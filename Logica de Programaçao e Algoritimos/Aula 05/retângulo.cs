@@ -15,6 +15,3 @@ diagonal = Math.Sqrt((bas * bas) + (altura * altura));
 //Saida de dados 
 WriteLine($"O valor da area é {area}, perimetro {perimetro} e diagonal  {diagonal}");
 
-
-
-

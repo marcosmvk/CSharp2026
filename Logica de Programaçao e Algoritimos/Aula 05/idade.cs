@@ -1,0 +1,11 @@
+using System.IO.Pipes;
+using static System.Console;
+int anos, meses, dias;
+Write("Digite o numero de dias");
+dias  = int.Parse(ReadLine());
+anos = dias / 365;
+meses = dias % 365;
+dias = dias % 365;
+WriteLine($"anos {anos}");
+WriteLine($"meses {meses}");
+WriteLine($"dias {dias}");
