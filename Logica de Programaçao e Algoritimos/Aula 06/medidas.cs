@@ -19,11 +19,8 @@ try{
     WriteLine($"Area do Trapezio = {areaTrapezio:F4}");
 }catch (Exception)
 {
-    WriteLine("Valores invalidos inseridos, programa encerrado");
+   WriteLine("Valores invalidos inseridos, programa encerrado!");
+
 }
-
-
-
-
 
 
