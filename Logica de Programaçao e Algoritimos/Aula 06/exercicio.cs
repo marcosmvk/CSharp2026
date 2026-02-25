@@ -1,6 +1,7 @@
 using static System.Console;
 //Declaração de variaveis 
 int a, b, c;
+bool pergunta, resultado;
 Write("Digite o valor A ");a = int.Parse(ReadLine());
 Write("Digite o valor B ");b = int.Parse(ReadLine());
 Write("Digite o valor C ");c = int.Parse(ReadLine());
