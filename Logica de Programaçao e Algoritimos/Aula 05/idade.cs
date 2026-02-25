@@ -1,4 +1,3 @@
-using System.IO.Pipes;
 using static System.Console;
 int anos, meses, dias;
 Write("Digite o numero de dias");

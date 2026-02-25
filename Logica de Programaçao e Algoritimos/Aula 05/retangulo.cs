@@ -1,4 +1,3 @@
-using System.ComponentModel.Design;
 using System.Net;
 using static System.Console;
 //Declaração de variaveis
