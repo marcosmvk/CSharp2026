@@ -38,5 +38,5 @@ try
 }
 catch (Exception ex)
 {
-    WriteLine("Valor inválido, erro = ", ex.Message);
+    WriteLine($"Valor inválido, erro = {ex.Message}");
 }
