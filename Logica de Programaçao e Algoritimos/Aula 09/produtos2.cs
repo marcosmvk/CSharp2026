@@ -40,7 +40,7 @@ switch(codigo)
            break;             
    }
 }
-catch(Exception)
+catch(Exception ex)
 {
-    WriteLine("Digite valores válidos");
+    WriteLine($"Digite valores válidos, erro: {ex.Message}");
 }
