@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RetanguloComPOO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5784ed4de09600f52a0653c23a9ffcc87f951cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d89f893af3785c1fe5be5ba805299e351d571e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("RetanguloComPOO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RetanguloComPOO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

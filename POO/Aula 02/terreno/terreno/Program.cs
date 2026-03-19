@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using terreno;
+using static System.Console;
+
+Write("Digite a largura do terreno: ");
+double largura = double.Parse(Console.ReadLine());
+Write("Digite o comprimento do terreno: ");
+double comprimento = double.Parse(Console.ReadLine());
+Write("Digite o preço do m² do terreno: ");
+double valor = double.Parse(Console.ReadLine());
+
+Terreno t = new Terreno(largura, comprimento, valor);
+
+t.Saida();
+ReadKey();  
+
