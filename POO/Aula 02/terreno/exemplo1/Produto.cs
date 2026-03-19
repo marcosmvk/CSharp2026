@@ -13,6 +13,15 @@ namespace exemplo1
         public int quantidade;
 
         //Construtor 
+
+        public Produto(string nome, double preco)
+        {
+            this.nome = nome;
+            this.preco = preco;
+            quantidade = 0;
+        }
+
+        //Construtor 
         public Produto(string nome, double preco, int quantidade)
         {
             this.nome = nome;   
