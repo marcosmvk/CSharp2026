@@ -1,0 +1,15 @@
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\bin\Debug\net10.0\Aplicativo02.exe
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\bin\Debug\net10.0\Aplicativo02.deps.json
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\bin\Debug\net10.0\Aplicativo02.runtimeconfig.json
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\bin\Debug\net10.0\Aplicativo02.dll
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\bin\Debug\net10.0\Aplicativo02.pdb
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\Aplicativo02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\Aplicativo02.AssemblyInfoInputs.cache
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\Aplicativo02.AssemblyInfo.cs
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\Aplicativo02.csproj.CoreCompileInputs.cache
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\Aplicativo02.sourcelink.json
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\Aplicativo02.dll
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\refint\Aplicativo02.dll
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\Aplicativo02.pdb
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\Aplicativo02.genruntimeconfig.cache
+C:\Users\FIC\Documents\CSharp2026\POO\Aula 03\Aplicativo02\Aplicativo02\obj\Debug\net10.0\ref\Aplicativo02.dll
