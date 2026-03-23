@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Aplicativo02
+﻿namespace Aplicativo02
 {
     internal class Funcionario
     {
@@ -22,24 +18,24 @@ namespace Aplicativo02
         //Metodos 
         public double SalarioLiquido()
         {
-            return salariobruto -= imposto;
+            return salariobruto - imposto;
         }
 
         public void AdicionarAumento(double porcentagem)
         {
-            salariobruto = salariobruto * porcentagem
+
+            salariobruto = salariobruto + (salariobruto * (porcentagem/100));
      
-           
         }
     
-        public string Dados_Do_Funcionario()
+        public string DadosDoFuncionario()
         {
             return $"Nome{nome} Salario Bruto: {salariobruto} Imposto: {imposto}" +
                 $"Salario Liquido: {SalarioLiquido()}";
 
         }
         
-        public string Salario_Atualizado()
+        public string SalarioAtualizado()
 
         {
             
