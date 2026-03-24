@@ -12,6 +12,13 @@ Notas n = new Notas(nome,nota01, nota02,nota03);
 
 WriteLine($"Nota final do aluno:{n.NotaFinal()} ");
 
+WriteLine(n.AprovadoReprovado() ? "Aprovado" : "Reprovado");
+if(!n.AprovadoReprovado())
+{
+    WriteLine($"Faltaram {n.Ponto()} pontos ");
+}
+
+
 
 
 ReadKey();
