@@ -8,7 +8,10 @@ namespace Exercicio1
     
     public static double Converter(double cotacao, double qtde)
         {
-            return (cotacao * qtde * 0,06) + (cotacao * qtde); 
+            double valorbase = cotacao * qtde;
+            double imposto = valorbase * (IOF / 100);
+            double total = valorbase + imposto;
+            return total;
         }
     }
 }
