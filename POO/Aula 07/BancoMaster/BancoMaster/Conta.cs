@@ -40,14 +40,15 @@ namespace BancoMaster
         }
 
 		//Métodos
-		public void Saque(double quantia)
+		public virtual void Saque(double quantia)
 		{
-			SaldoConta -= quantia + 5;
+			SaldoConta -= quantia + 5.00;
 		}
 
 		public void Deposito(double quantia)
 		{
 			SaldoConta += quantia;
 		}
+
     }
 }
