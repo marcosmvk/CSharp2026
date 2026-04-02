@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Master.ContaPJ" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAACAAAACAAAAA=</HashCode>
+      <FileName>ContaPJ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Master.Conta" Collapsed="true">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAEAAAAAAAAAAAAAgAAAAAAEAAEgAAQCAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="Master.ContaPoupanca" Collapsed="true">
+    <Position X="10" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAQAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ContaPoupanca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Master.Pessoa">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Pessoa.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Master.IOperacao" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Operacao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
