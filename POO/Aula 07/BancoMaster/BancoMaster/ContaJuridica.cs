@@ -32,6 +32,11 @@ namespace BancoMaster
             SaldoConta += quantia;
 
         }
+
+        public override void Dados()
+        {
+            base.Dados();
+        }
       
 
     }

@@ -49,6 +49,13 @@ namespace BancoMaster
 		{
 			SaldoConta += quantia;
 		}
+        public virtual void Dados()
+        {
+            Console.WriteLine($"Dados da conta: \n " +
+                $"\tConta: {numero}\n" +
+                $"\tTitular: {TitularConta}\n" +
+                $"\tSaldo: {SaldoConta:C}");
+        }
 
     }
 }

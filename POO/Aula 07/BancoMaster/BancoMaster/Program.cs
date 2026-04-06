@@ -1,5 +1,6 @@
 ﻿using BancoMaster;
 using static System.Console;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 WriteLine("Escolha qual conta deseja abrir: \n" +
     "\t1 - Conta comum\n" +
@@ -30,6 +31,92 @@ switch (opcao)
     }
 break;
 
+
+
+  case 2:
+    ContaPoupanca poupanca;
+    Write("Digite o titular da conta: ");
+    titular = ReadLine();
+    Write("Digite o número da conta: ");
+    numero = int.Parse(ReadLine());
+    Write("Digite a taxa de juros: ");
+    double juros = double.Parse(ReadLine());
+    Write("Deseja fazer depósito inicial (s/n): ");
+    escolha = char.Parse(ReadLine().ToLower());
+
+    if (escolha == 's')
+    {
+        Write("Digite o depósito inicial: ");
+        double deposito = double.Parse(ReadLine());
+        poupanca = new ContaPoupanca(numero, titular, deposito, juros);
+    }
+    else
+    {
+        poupanca = new ContaPoupanca(numero, titular, juros);
+    }
+    break;
+
+case 3:
+    ContaJuridica empresa;
+    Write("Digite o titular da conta: ");
+    titular = ReadLine();
+    Write("Digite o número da conta: ");
+    numero = int.Parse(ReadLine());
+    Write("Digite o limite de empréstimo: ");
+    double limite = double.Parse(ReadLine());
+    Write("Deseja fazer depósito inicial (s/n): ");
+    escolha = char.Parse(ReadLine().ToLower());
+
+    if (escolha == 's')
+    {
+        Write("Digite o depósito inicial: ");
+        double deposito = double.Parse(ReadLine());
+        empresa = new ContaJuridica(numero, titular, deposito, limite);
+    }
+    else
+    {
+        empresa = new ContaJuridica(numero, titular, limite);
+    }
+    break;
+ 
 }
+
+
+ReadKey();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ReadKey();
