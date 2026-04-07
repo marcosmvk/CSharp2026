@@ -27,5 +27,11 @@ namespace Master
             LimiteConta -= qtde;
             SaldoConta += qtde;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"\n\tLimite conta: {limite:c}";
+        }
 	}
+
 }
