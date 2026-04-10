@@ -1,6 +1,8 @@
 ﻿using DepartamentoPessoal.Classes.Entidades;
 using static System.Console;
 
+//alterações realizadas
+
 List<Funcionario> colaboradores = new();
 
 Write("Quantos funcionários irá cadastrar: ");
