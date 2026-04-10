@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExemploSemPOO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5784ed4de09600f52a0653c23a9ffcc87f951cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e5396cdf21a3d29f01f75a3c181bdbec3ff6b17")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExemploSemPOO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExemploSemPOO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

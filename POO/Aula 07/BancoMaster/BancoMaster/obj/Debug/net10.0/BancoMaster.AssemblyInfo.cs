@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BancoMaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f6e5493863afcc59e5da14eae7106f6dfe58dd4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e5396cdf21a3d29f01f75a3c181bdbec3ff6b17")]
 [assembly: System.Reflection.AssemblyProductAttribute("BancoMaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BancoMaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
