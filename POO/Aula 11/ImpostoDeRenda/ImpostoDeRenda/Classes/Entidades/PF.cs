@@ -12,7 +12,13 @@ namespace ImpostoDeRenda.Classes.Entidades
 
         public override double Imposto()
         {
-            throw new NotImplementedException();
+            double imposto;
+            if (RendaAnual < 20.000)
+                imposto = RendaAnual * 0.15;
+            else
+                imposto = RendaAnual * 0.25;
+            imposto -= saude * 0.5;
+            return imposto;
         }
     }
 }

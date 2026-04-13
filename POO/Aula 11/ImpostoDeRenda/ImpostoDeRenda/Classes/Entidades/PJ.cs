@@ -13,7 +13,10 @@ namespace ImpostoDeRenda.Classes.Entidades
 
         public override double Imposto()
         {
-            throw new NotImplementedException();
+            if (funcionarios > 10)
+                return RendaAnual * 0.14;
+            else 
+                return RendaAnual * 0.16;
         }
     }
 }
