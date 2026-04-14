@@ -1,6 +1,6 @@
 ﻿using ImpostoDeRenda.Classes.Entidades;
 using static System.Console;
-List <Contribuintes> lista = new List <Contribuintes> ();
+List<Contribuintes> lista = new List<Contribuintes>();
 Write("Digite o número de contribuintes: ");
 int n = int.Parse(ReadLine());
 for (int i = 1; i <= n; i++)
@@ -19,7 +19,7 @@ for (int i = 1; i <= n; i++)
         Console.Write("Gastos com saúde: ");
         double gastos = double.Parse(Console.ReadLine());
 
-        lista.Add(new PF (nome, renda, gastos));
+        lista.Add(new PF(nome, renda, gastos));
     }
     else
     {
@@ -40,7 +40,7 @@ foreach (Contribuintes c in lista)
     total += imposto;
 }
 
-            Console.WriteLine($"\nTOTAL DE IMPOSTO: R$ {total:F2}");
+Console.WriteLine($"\nTOTAL DE IMPOSTO: R$ {total:F2}");
 
 
 ReadKey();
