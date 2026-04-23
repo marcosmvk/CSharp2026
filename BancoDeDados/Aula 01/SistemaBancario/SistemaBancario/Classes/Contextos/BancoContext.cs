@@ -16,9 +16,8 @@ namespace SistemaBancario.Classes.Contextos
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Use SQLite by default to avoid requiring a local SQL Server / LocalDB installation.
-            // This creates a local file named BancoDB.db in the application folder.
-            optionsBuilder.UseSqlite("Data Source=BancoDB.db");
+            optionsBuilder.UseSqlServer(
+                @"Server=ECFP507D1319370\SQLEXPRESS;Database=Banco;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -33,7 +32,7 @@ namespace SistemaBancario.Classes.Contextos
             }
                 
                 
-                );
+            );
         }
 
     }
