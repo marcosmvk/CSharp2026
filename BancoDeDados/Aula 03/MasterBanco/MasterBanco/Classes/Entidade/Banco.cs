@@ -87,10 +87,61 @@ namespace MasterBanco.Classes.Entidade
                     {
                         Console.WriteLine("Nenhuma conta encontrada");
                     }
+
                 }
 
             }
         }
+
+        //U - Update 
+        public static void ModificarConta(int id, string titular, int numeroConta, decimal saldo)
+        {
+            string consulta = "UPDATE Contas SET Titular = @titular, numero_da_conta = @numeroConta, Saldo = @saldo WHERE Id = @id";
+            using (SqlConnection conexao = new SqlConnection(conectarCaminho))
+            using (SqlCommand comando = new SqlCommand(consulta, conexao))
+            {
+                comando.Parameters.AddWithValue("@id", id);
+                comando.Parameters.AddWithValue("@titular", titular);
+                comando.Parameters.AddWithValue("@numeroConta", numeroConta);
+                comando.Parameters.AddWithValue("@saldo", saldo);
+
+                conexao.Open();
+                int resultado = comando.ExecuteNonQuery();
+
+                if (resultado > 0)
+                {
+                    Console.WriteLine("Conta atualizada com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Conta não encontrada!");
+                }
+
+            }
+        }
+
+        //D - Delete
+        public static void DeletarContas(int id)
+        {
+            string consulta = "DELETE FROM Contas WHERE Id = @id";
+            using (SqlConnection conexao = new SqlConnection(conectarCaminho))
+            using (SqlCommand comando = new SqlCommand(consulta, conexao))
+            {
+                comando.Parameters.AddWithValue("@Id", id);
+                conexao.Open();
+                int resultado = comando.ExecuteNonQuery();
+                if (resultado > 0)
+                {
+                    Console.WriteLine("Conta deletada com sucesso!");
+                }
+                else
+                { 
+                    Console.WriteLine("Conta não encontrada");
+                }
+            }
+        }
+      
+
 
 
 
