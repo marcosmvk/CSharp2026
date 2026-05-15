@@ -2,6 +2,19 @@ h1:focus {
     outline: none;
 }
 
+body{
+    height: 100%;
+}
+
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: inherit;
+}
+
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
 }
@@ -9,6 +22,12 @@ h1:focus {
 .invalid {
     outline: 1px solid #e50000;
 }
+.wrapper{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 
 .validation-message {
     color: #e50000;
@@ -174,5 +193,12 @@ h1:focus {
     .acesso:hover {
         transition: all 1s ease-in-out;
         scale: 1.1;
+
+    }
+
+    .link-cabecalho{
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
 
     }
