@@ -1,0 +1,45 @@
+﻿@page "/listadeusuarios"
+<CabecalhoPagina/>
+
+<section class="lista-alunos-section">
+    <div class="lista-alunos-container">
+        <div class="lista-alunos-cabecalho">
+            <h2 class="lista-alunos-titulo">
+                Lista de Alunos
+            </h2>
+            <!-- Implementar lógica para contagemnno c#-->
+            <span class="contador">
+                0 Cadastros
+            </span>
+          </div>
+          <div class="tabela-w">
+              <table class="tabela-alunos">
+                  <thead>
+                      <tr>
+                          <th>Nome</th>
+                          <th>Curso</th>
+                          <th>Wifi</th>
+                          <th>Ações</th>
+                      </tr>
+                  </thead>
+                  <tbody class="tabela-alunos2">
+                      <!-- Exemplo estático p/ visuaçllização (remover quando implmentar C#)-->
+                      <tr>
+                          <td> Clodoaldo</td>
+                          <td> BackEnd</td>
+                          <td> Inativo</td>
+                          <td> Aguardando aprovação</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+    </div>
+</section>
+
+
+
+<Rodape/>
+
+@code {
+
+}

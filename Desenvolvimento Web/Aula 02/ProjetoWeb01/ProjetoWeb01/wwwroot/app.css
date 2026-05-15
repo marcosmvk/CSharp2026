@@ -36,18 +36,17 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
-/*Estilo cabeçalho */
+/* Estilo cabeçalho */
 .cabecalho {
-    color:white;
-    background-color:#e30613;
-    margin:0;
-    text-align:center;
-    text-decoration:underline;
-    font-size:3rem;
-    font-family:sans-serif
-
+    color: white;
+    background-color: #e30613;
+    margin: 0;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+    font-family: sans-serif;
 }
-/*Estilo rodapé*/
+/* Estilo rodapé */
 
 .footer {
     justify-content: center;
@@ -55,47 +54,46 @@ h1:focus {
     display: flex;
     padding: 10px;
     background-color: #e30613;
-    font-size:1em;
-    color:white;
-}
-
-.footer-texto {
-    margin-top:1.5rem;
-    text-align:center;
-    font-size:0.75rem;
+    font-size: 1rem;
     color: white;
 }
 
-/*Estilos da tela login */
+.footer-texto {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: white;
+}
+
+/* =========== Estilos da tela login ========= */
 .corpo-pagina {
     justify-content: center;
     align-items: center;
     display: flex;
     padding: 1rem;
-
 }
 
 .login-container {
     background-color: white;
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(255,0,0,5);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
     border-top: 4px solid #b91d32;
     width: 100%;
     max-width: 28rem;
 }
 
 .login-cabecalho {
-    text-align:center;
+    text-align: center;
     margin-bottom: 2rem;
-    }
+}
 
 .login-titulo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #1a1a1a;
     margin: 0;
-    }
+}
 
 .login-subtitulo {
     font-size: 0.87rem;
@@ -109,7 +107,7 @@ h1:focus {
     gap: 1.5rem;
 }
 
-.form-group {
+.form-grupo {
     display: flex;
     flex-direction: column;
 }
@@ -119,9 +117,9 @@ h1:focus {
     font-size: 0.87rem;
     color: #374151;
     margin-bottom: 0.25rem;
-    }
+}
 
-.input-w{
+.input-w {
     position: relative;
     border-radius: 0.375rem;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
@@ -130,12 +128,51 @@ h1:focus {
 .form-input {
     display: block;
     width: 90%;
+}
+
+    .form-input:focus {
+        border-color: #b91d32;
+        box-shadow: 0 0 0 3px rgba(185, 29, 50, 0.1);
+        outline: none;
+        transition: all 1s cubic-bezier(0,0,.5,1);
+        width: 100%;
     }
 
-.form-input:focus{
-    border-color: #b91d32;
-    box-shadow: 0 0 0 3px rgba(185, 29, 50, 0.1);
-    outline: none;
-    transition: all 1s cubic-bezier(0,0,.5,1);
+.btn-login {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px 0 rgba(255,0,0,1);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    background-color: #e30613;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
+
+    .btn-login:hover {
+        background-color: #991828;
+    }
+
+    .btn-login:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(185,29,50,0.5), 0 0 0 2px rgba(185,29,50,0.2);
+    }
+
+/* Campo sem acesso */
+.acesso {
+    background-color: #e0e0e0;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+    .acesso:hover {
+        transition: all 1s ease-in-out;
+        scale: 1.1;
+
+    }
