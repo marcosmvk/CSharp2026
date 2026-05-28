@@ -10,6 +10,7 @@
   <ItemGroup>
     <Folder Include="Classes\Contratos\" />
     <Folder Include="Classes\Serv\" />
+    <Folder Include="Consultas\" />
   </ItemGroup>
 
   <ItemGroup>
