@@ -9,7 +9,7 @@ namespace Projet_Web_01.Dados
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Server=ECFP507D1319370\SQLEXPRESS;Database=Aluno;Trusted_Connection=True;TrustServerCertificate=True;"
+                @"Server=ECFP507D1319370\SQLEXPRESS01;Database=Aluno;Trusted_Connection=True;TrustServerCertificate=True;"
                 );
         }
 

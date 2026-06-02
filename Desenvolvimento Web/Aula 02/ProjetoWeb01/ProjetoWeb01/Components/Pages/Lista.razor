@@ -1,53 +1,78 @@
 ﻿@page "/listadeusuarios"
 @using Projet_Web_01.Dados
-@using ProjetoWeb01.Classes.Entidades
+@using Projet_Web_01.Classes.Entidades
 @using Microsoft.EntityFrameworkCore
 @inject AlunoContext alunoContext
 @rendermode InteractiveServer
 
 
-
 <div class="wrapper">
-<CabecalhoPagina/>
-<section class="lista-alunos-section">
-    <div class="lista-alunos-container">
-        <div class="lista-alunos-cabecalho">
-            <h2 class="lista-alunos-titulo">
-                Lista de Alunos
-            </h2>
-            <!-- Implementar lógica para contagemnno c#-->
-            <span class="contador">
-                0 Cadastros
-            </span>
-          </div>
-          <div class="tabela-w">
-              <table class="tabela-alunos">
-                  <thead>
-                      <tr>
-                          <th>Nome</th>
-                          <th>Curso</th>
-                          <th>Wifi</th>
-                          <th>Ações</th>
-                      </tr>
-                  </thead>
-                  <tbody class="tabela-alunos2">
-                      <!-- Exemplo estático p/ visuaçllização (remover quando implmentar C#)-->
-                      <tr>
-                          <td> Clodoaldo</td>
-                          <td> BackEnd</td>
-                          <td> Inativo</td>
-                          <td> Aguardando aprovação</td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
-    </div>
-</section>
+    <CabecalhoPagina />
+
+    <section class="lista-alunos-section">
+        <div class="lista-alunos-container">
+            <div class="lista-alunos-cabecalho">
+                <h2 class="lista-alunos-titulo">
+                    Lista de Alunos
+                </h2>
+                <!--Implementar lógica para contagem no C#-->
+                <span class="contador">
+                    @alunos.Count Cadastrados
+                </span>
+            </div>
+            <div class="tabela-w">
+                <table class="tabela-alunos">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Curso</th>
+                            <th>WiFI</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabela-alunos2">
+                        <!--Exemplo estático p/visualização (remover quando implementar c#)-->
+                        @foreach (var aluno in alunos)
+                        {
+                            <tr>
+                                <td>@aluno.Nome</td>
+                                <td>@ObterNomeCurso(aluno.CursoID)</td>
+                                <td>@aluno.StatusWIFI</td>
+                                <td>@aluno.StatusAction</td>
+                            </tr>
+
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
 
 
-<Rodape/>
+
+    <Rodape />
 </div>
 @code {
+
+    private List<Aluno> alunos = new List<Aluno>();
+    private Cursos cursos = new Cursos();
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Carrega os aluno do banco de dados
+        alunos = await alunoContext.Alunos.ToListAsync();
+    }
+
+    //Retorna o nome do curso baseado no ID
+    private string ObterNomeCurso(int curso)
+    {
+        if (cursos.Curso.TryGetValue(curso, out var nomeCurso))
+        {
+            return nomeCurso;
+        }
+        return "Curso não encontrado";
+    }
 
 }

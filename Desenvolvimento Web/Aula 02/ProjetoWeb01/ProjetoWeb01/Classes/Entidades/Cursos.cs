@@ -1,4 +1,4 @@
-﻿namespace ProjetoWeb01.Classes.Entidades
+﻿namespace Projet_Web_01.Classes.Entidades
 {
     public class Cursos
     {

@@ -1,5 +1,5 @@
 ﻿using Projet_Web_01.Classes.Enumeracoes;
-using ProjetoWeb01.Classes.Entidades;
+using Projet_Web_01.Classes.Entidades;
 
 namespace Projet_Web_01.Classes.Entidades
 {
