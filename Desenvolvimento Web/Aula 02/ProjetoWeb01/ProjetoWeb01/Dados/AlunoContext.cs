@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Projet_Web_01.Classes.Entidades;
+using ProjetoWeb01.Classes.Entidades;
 
-namespace Projet_Web_01.Dados
+namespace ProjetoWeb01.Dados
 {
     public class AlunoContext : DbContext
     {

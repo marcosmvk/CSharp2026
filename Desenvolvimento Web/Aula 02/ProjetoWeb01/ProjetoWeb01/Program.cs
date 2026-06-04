@@ -1,6 +1,6 @@
 using ProjetoWeb01.Components;
-using Projet_Web_01.Classes.Entidades;
-using Projet_Web_01.Dados;
+using ProjetoWeb01.Classes.Entidades;
+using ProjetoWeb01.Dados;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
 
