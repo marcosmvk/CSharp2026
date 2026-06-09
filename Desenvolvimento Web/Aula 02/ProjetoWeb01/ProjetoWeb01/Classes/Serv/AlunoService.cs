@@ -52,6 +52,16 @@ namespace ProjetoWeb01.Classes.Serv
                 aluno.StatusWIFI = "Inativo";
                 aluno.StatusAction = "Aguardando aprovação";
 
+                if (string.IsNullOrWhiteSpace(aluno.Email))
+                {
+                    aluno.Email = $"ra{aluno.RA}@aluno.local";
+                }
+
+                if (string.IsNullOrWhiteSpace(aluno.Senha))
+                {
+                    aluno.Senha = aluno.RA.ToString();
+                }
+
                 //Adicionar o aluno ao banco de dados
                 dbContext.Alunos.Add(aluno);
                 await dbContext.SaveChangesAsync();
