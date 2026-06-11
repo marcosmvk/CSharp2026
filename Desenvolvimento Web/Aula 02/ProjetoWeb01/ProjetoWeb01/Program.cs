@@ -14,8 +14,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+//Serviços da página
 builder.Services.AddDbContext<AlunoContext>();
 builder.Services.AddScoped<AlunoService>();
+builder.Services.AddScoped<AuthService>();
 
 var app = builder.Build();
 
