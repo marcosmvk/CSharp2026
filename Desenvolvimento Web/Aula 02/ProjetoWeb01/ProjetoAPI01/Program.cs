@@ -6,10 +6,7 @@ using ProjetoAPI01.Classes.DTO;
 
 
 
-
-var builder = WebApplication.CreateBuilder(args);
-
-var stringConexaoBancoAluno = builder.Configuration.GetConnectionString("Aluno") ?? throw new InvalidOperationException(" A string de conexão 'Aluno' não foi encontrada no appsettings.json");
+var builder = WebApplication.CreateSlimBuilder(args);
 
 //Adicionar serviços a api
 builder.Services.ConfigureHttpJsonOptions(options =>
@@ -17,7 +14,7 @@ builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
 });
 
-builder.Services.AddScoped(_ => RepositorioUsuario(stringConexaoBancoAluno));
+builder.Services.AddScoped(_ => new RepositorioUsuario(stringConexaoBancoAluno));
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -30,11 +27,9 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-var gruposUsuarios = app.MapGroup("/api/ususarios");
-
-//Endpoint REST responsável por autenticar o usuário 
-gruposUsuarios.MapPost("/login", async Task<IResult> ([FromBody] LoginRequestDTO dadoslogin, RepositorioUsuario repositoriousuario, CancellationToken cancellationToken) =>
-
+//Endpoint REST resposável por autenticar o usuário
+gruposUsuarios.MapPost("/login", async Task<IResult> (
+    [FromBody] LoginRequestDTO dadosLogin, RepositorioUsuario repositorioUsuario, CancellationToken cancellationToken) =>
 {
 if (string.IsNullOrWhiteSpace(dadoslogin.Email) || string.IsNullOrWhiteSpace(dadoslogin.Senha))
 
