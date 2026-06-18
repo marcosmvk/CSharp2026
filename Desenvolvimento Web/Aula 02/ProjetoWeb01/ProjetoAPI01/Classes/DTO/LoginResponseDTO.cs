@@ -5,7 +5,7 @@
         public bool Sucesso { get; set; }
         public string Mensagem { get; set; } = string.Empty;
         public string Nome { get; set; } = string.Empty ;
-        public int Regra {  get; set; }
+        public int Regra { get; set; } = 0;
       
     }
 

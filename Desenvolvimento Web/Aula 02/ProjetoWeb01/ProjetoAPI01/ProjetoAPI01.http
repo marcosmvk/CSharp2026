@@ -1,6 +1,11 @@
-@ProjetoAPI01_HostAddress = http://localhost:5004
+@ProjetoAPI01_HostAddress=http://localhost:5004
 
-GET {{ProjetoAPI01_HostAddress}}/weatherforecast/
+POST {{ProjetoAPI01_HostAddress}}/api/usuarios/login
+Content-Type: application/json
 Accept: application/json
 
+{
+"email": "felipe1@aluno.senaisp.br",
+"senha": "F1c"
+}
 ###

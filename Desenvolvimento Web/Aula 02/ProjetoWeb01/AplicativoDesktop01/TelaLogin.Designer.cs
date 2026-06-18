@@ -90,7 +90,7 @@
             textBox2.TabIndex = 4;
             textBox2.TextAlign = HorizontalAlignment.Center;
             textBox2.UseSystemPasswordChar = true;
-            textBox2.TextChanged += textBox2_TextChanged;
+
             // 
             // button1
             // 

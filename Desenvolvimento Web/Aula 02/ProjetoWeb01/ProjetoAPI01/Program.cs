@@ -7,6 +7,7 @@ using ProjetoAPI01.Classes.DTO;
 
 
 var builder = WebApplication.CreateSlimBuilder(args);
+var stringConexaoBancoAluno = builder.Configuration.GetConnectionString("Aluno") ?? throw new InvalidOperationException("A string de conexão 'Aluno' não foi encontrada no appsettings.json");
 
 //Adicionar serviços a api
 builder.Services.ConfigureHttpJsonOptions(options =>
@@ -15,6 +16,7 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 });
 
 builder.Services.AddScoped(_ => new RepositorioUsuario(stringConexaoBancoAluno));
+
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -26,42 +28,42 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+var gruposUsuarios = app.MapGroup("/api/usuarios");
 
-//Endpoint REST resposável por autenticar o usuário
+//Endpoint REST responsável por autenticar o usuário
 gruposUsuarios.MapPost("/login", async Task<IResult> (
     [FromBody] LoginRequestDTO dadosLogin, RepositorioUsuario repositorioUsuario, CancellationToken cancellationToken) =>
 {
-if (string.IsNullOrWhiteSpace(dadoslogin.Email) || string.IsNullOrWhiteSpace(dadoslogin.Senha))
-
-{
-    return Results.BadRequest(new LoginResponseDTO
+    if (string.IsNullOrWhiteSpace(dadosLogin.Email) || string.IsNullOrWhiteSpace(dadosLogin.Senha))
     {
-        Sucesso = false,
-        Mensagem = "E-mail e senha são obrigatórios."
-    });
-}
-var usuario = await repositoriousuario.BuscarPorEmailesenha(dadoslogin.Email, dadoslogin.Senha, cancellationToken);
-if (usuario is null)
-{
-    return Results.Unauthorized();
-}
+        return Results.BadRequest(new LoginResponseDTO
+        {
+            Sucesso = false,
+            Mensagem = "E-mail e senha são obrigatórios."
+        });
+    }
+    var usuario = await repositorioUsuario.BuscarPorEmailesenha(
+        dadosLogin.Email, dadosLogin.Senha, cancellationToken);
 
-return Results.Ok(new LoginResponseDTO
-{
-    Sucesso = true,
-        Mensagem = "Login realizado com sucess",
+    if (usuario is null)
+    {
+        return Results.Unauthorized();
+    }
+
+    return Results.Ok(new LoginResponseDTO
+    {
+        Sucesso = true,
+        Mensagem = "Login realizado com sucesso",
         Nome = usuario.Nome,
         Regra = usuario.Regra
     });
 
 }).WithName("LoginUsuario");
 
-
 app.Run();
 
 [JsonSerializable(typeof(LoginRequestDTO))]
 [JsonSerializable(typeof(LoginResponseDTO))]
-
 internal partial class AppJsonSerializerContext : JsonSerializerContext
 {
 
