@@ -30,6 +30,7 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -62,6 +63,20 @@
             tableLayoutPanel1.TabIndex = 0;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(24, 24);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(950, 320);
+            dataGridView1.TabIndex = 2;
+            dataGridView1.ReadOnly = false;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+
+            // 
             // button1
             // 
             button1.ForeColor = SystemColors.ActiveCaptionText;
@@ -71,6 +86,7 @@
             button1.TabIndex = 1;
             button1.Text = "APROVAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // TelaAdmin
             // 
@@ -79,6 +95,7 @@
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(999, 511);
             Controls.Add(button1);
+            Controls.Add(dataGridView1);
             Controls.Add(tableLayoutPanel1);
             ForeColor = SystemColors.ButtonFace;
             Name = "TelaAdmin";
@@ -90,5 +107,6 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Button button1;
+        private DataGridView dataGridView1;
     }
 }

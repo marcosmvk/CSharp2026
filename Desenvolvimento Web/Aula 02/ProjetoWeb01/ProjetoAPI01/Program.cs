@@ -33,6 +33,35 @@ var gruposUsuarios = app.MapGroup("/api/usuarios");
 
 gruposUsuarios.MapGet("/ping", () => Results.Ok(new { status = "ok" }));
 
+// Endpoint para listar todos os usuários (para o painel admin)
+gruposUsuarios.MapGet("/", async (RepositorioUsuario repositorio, CancellationToken cancellationToken) =>
+{
+    try
+    {
+        var usuarios = await repositorio.ListarTodos(cancellationToken);
+        return Results.Ok(usuarios);
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem(detail: ex.Message, statusCode: StatusCodes.Status500InternalServerError);
+    }
+}).WithName("ListarUsuarios");
+
+// Endpoint para aprovar um usuário (define Regra = 1)
+gruposUsuarios.MapPut("/{id:int}/aprovar", async (int id, RepositorioUsuario repositorio, CancellationToken cancellationToken) =>
+{
+    try
+    {
+        var ok = await repositorio.AprovarUsuario(id, cancellationToken);
+        if (!ok) return Results.NotFound();
+        return Results.NoContent();
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem(detail: ex.Message, statusCode: StatusCodes.Status500InternalServerError);
+    }
+}).WithName("AprovarUsuario");
+
 //Endpoint REST responsável por autenticar o usuário
 gruposUsuarios.MapPost("/login", async Task<IResult> (
     [FromBody] LoginRequestDTO dadosLogin,
