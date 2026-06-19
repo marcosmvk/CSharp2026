@@ -1,0 +1,13 @@
+para testar a API
+
+abra o terminal power shell
+
+use o seguinte comando
+
+Invoke-RestMethod -Method Post -Uri "http://localhost:5034/api/usuarios/login" -ContentType "application/json" -Body '{"email":"elma@aluno.senaisp.br","senha":"F1c"}'
+
+Vai retornar certo
+
+Invoke-RestMethod -Method Post -Uri "http://localhost:5034/api/usuarios/login" -ContentType "application/json" -Body '{"email":"felipe1@aluno.senaisp.br","senha":"F1c"}'
+
+Vai retornar não autorizado

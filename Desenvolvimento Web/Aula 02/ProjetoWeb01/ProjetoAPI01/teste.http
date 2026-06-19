@@ -1,9 +1,5 @@
 @ProjetoAPI01_HostAddress=http://localhost:5034
 
-GET {{ProjetoAPI01_HostAddress}}/api/usuarios/ping
-Accept: application/json
-
-###
 
 POST {{ProjetoAPI01_HostAddress}}/api/usuarios/login
 Content-Type: application/json
@@ -14,5 +10,3 @@ Accept: application/json
 "senha": "F1c"
 }
 ###
-
-
